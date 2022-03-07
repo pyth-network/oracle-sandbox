@@ -10,13 +10,13 @@ PYTH_CLIENT_PATH = '/home/pyth/pyth-client'
 
 PRODUCTS = {
     'BTC': {
-        'symbol': 'BTC/USD',
+        'symbol': 'Crypto.BTC/USD',
     },
     'ETH': {
-        'symbol': 'ETH/USD',
+        'symbol': 'Crypto.ETH/USD',
     },
     'LTC': {
-        'symbol': 'LTC/USD',
+        'symbol': 'Crypto.LTC/USD',
     },
 }
 
