@@ -38,6 +38,7 @@ def main():
     logging.debug('Generating keypair')
     cfg_dir = mkdtemp(prefix='cfg_')
     keypair_path = os.path.join(cfg_dir, 'id.json')
+    logging.debug('Generated keypair path: %s', keypair_path)
     keygen_output = check_output([
         'solana-keygen', 'new', '--no-passphrase', '--outfile', keypair_path
     ]).decode('ascii').splitlines()
@@ -69,9 +70,9 @@ def main():
     # Write program key to file
     logging.debug('Writing program key to file')
     pythd_dir = mkdtemp(prefix='pythd_')
+    logging.debug('pythd temporary directory: %s', pythd_dir)
     with open(os.path.join(pythd_dir, 'program_key.json'), 'w') as f:
         f.write(program_key)
-    logging.debug('Wrote program key to file')
 
     # Create the symlink to the publish_key_pair.json
     logging.debug('Creating publish_key_pair.json symlink')
