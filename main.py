@@ -164,17 +164,5 @@ def main():
         ])
     logging.debug('Initialized price accounts')
 
-    # Run pythd now everything has been set up
-    logging.debug('Starting pythd')
-    check_call([
-        'pythd',
-        '-r', 'localhost',
-        '-k', pythd_dir,
-        '-x',
-        '-m', 'finalized',
-        '-d',
-        '-p', str(pythd_ws_port),
-    ])
-
 if __name__ == '__main__':
     main()
