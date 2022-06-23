@@ -1,6 +1,6 @@
 FROM docker.io/pythfoundation/pyth-client:devnet-v2.10.1
 
-RUN sudo apt-get update && sudo apt-get install -y python3-pip libffi-dev valgrind htop iptables dsniff net-tools
+RUN sudo apt-get update && sudo apt-get install -y python3-pip libffi-dev valgrind htop iptables dsniff net-tools nodejs npm nginx
 RUN pip3 install pythclient solana
 
 ARG SOLANA_RPC_PORT
