@@ -58,7 +58,7 @@ def main():
     logging.debug('Deploying program')
     deploy_output = check_output([
         'solana', 'program', 'deploy',
-        os.path.join(PYTH_CLIENT_PATH, 'target', 'oracle.so'),
+        os.path.join(PYTH_CLIENT_PATH, 'target', 'deploy', 'pyth_oracle.so'),
         '--commitment', 'finalized',
         '--url', 'localhost',
         '--keypair', keypair_path,

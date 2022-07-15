@@ -1,4 +1,4 @@
-FROM docker.io/pythfoundation/pyth-client:devnet-v2.10.1
+FROM docker.io/pythfoundation/pyth-client:pythd-v2.14.0
 
 COPY main.py .
 
